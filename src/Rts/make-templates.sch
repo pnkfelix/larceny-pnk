@@ -201,6 +201,7 @@ OPTIMIZE=-O3 -DNDEBUG2 # -DNDEBUG
 # FIXME (should clear up these warnings instead of turning them off)
 WARNINGS=-Wall -Wno-unused-function -Wno-unused-variable -Wno-unused-label
 CFLAGS+=-c -falign-functions=4 -m32 -ISys -IBuild -IIAssassin $(DEBUGINFO) $(OPTIMIZE) $(WARNINGS)
+LDXFLAGS=-Wl,-no_pie
 default_target: larceny.bin
 smoke-test: larceny.bin
 	cp larceny.bin LRoot/
